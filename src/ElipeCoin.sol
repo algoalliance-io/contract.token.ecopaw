@@ -1051,13 +1051,13 @@ abstract contract ERC20Permit is ERC20, IERC20Permit, EIP712 {
     }
 }
 
-// File: contracts/EcoPaw.sol
+// File: contracts/ElipeCoin.sol
 
 // Compatible with OpenZeppelin Contracts ^5.0.0
 pragma solidity 0.8.20;
 
-contract EcoPawToken is ERC20, ERC20Permit {
-    constructor() ERC20("Eco Paw", "ECOPAW") ERC20Permit("Eco Paw") {
-        _mint(msg.sender, 210000000000 * 10 ** decimals());
+contract ElipeCoin is ERC20, ERC20Permit {
+    constructor() ERC20("ElipeCoin", "ELC") ERC20Permit("ElipeCoin") {
+        _mint(msg.sender, 10000000 * 10 ** decimals());
     }
 }

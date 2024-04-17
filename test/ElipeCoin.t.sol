@@ -3,25 +3,29 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-import "../src/EcoPawToken.sol";
+import "../src/ElipeCoin.sol";
 
-contract EcoPawTokenTest is Test {
-    EcoPawToken t;
+contract ElipeCoinTest is Test {
+    ElipeCoin t;
 
     address deployer = address(12345);
 
     function setUp() public {
         vm.startPrank(deployer);
-        t = new EcoPawToken();
+        t = new ElipeCoin();
         vm.stopPrank();
     }
 
     function testName() public {
-        assertEq(t.name(), "Eco Paw");
+        assertEq(t.name(), "ElipeCoin");
+    }
+
+    function testSymbol() public {
+        assertEq(t.symbol(), "ELC");
     }
 
     function testTokenSupply() public {
-        assertEq(t.totalSupply(), 210_000_000_000e18);
+        assertEq(t.totalSupply(), 10000000e18);
     }
 
     function testTransfer() public {
